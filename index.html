@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode and QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Barcode and QR Code Generator</h1>
+        <div class="generator-container">
+            <div class="generator">
+                <h2>Barcode</h2>
+                <input type="text" id="barcodeInput" placeholder="Enter text or numbers">
+                <button onclick="generateBarcode()">Generate Barcode</button>
+                <button onclick="downloadBarcode()">Download Barcode</button>
+                <button onclick="regenerateBarcode()">Regenerate Barcode</button>
+                <div class="barcode">
+                    <svg id="barcode"></svg>
+                </div>
+            </div>
+            <div class="generator">
+                <h2>QR Code</h2>
+                <input type="text" id="qrInput" placeholder="Enter text or numbers">
+                <button onclick="generateQRCode()">Generate QR Code</button>
+                <button onclick="downloadQRCode()">Download QR Code</button>
+                <button onclick="regenerateQRCode()">Regenerate QR Code</button>
+                <div class="qrcode">
+                    <canvas id="qrcodeCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+        <h4>Create by Fikri</h4>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
